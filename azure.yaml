@@ -1,8 +1,0 @@
-name: portfolio-php
-metadata:
-  template: wordpress-app
-services:
-  web:
-    project: ./wordpress
-    language: php
-    host: appservice

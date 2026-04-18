@@ -1,7 +1,10 @@
 FROM wordpress:6.4-php8.2-apache
 
-# Copy custom themes, plugins, and uploads
-COPY ./wordpress/wp-content /var/www/html/wp-content
+# Sao chép toàn bộ thư mục wordpress của bạn vào máy chủ
+COPY ./wordpress /var/www/html
 
-# Tối ưu hóa cho Render (sử dụng cổng 80)
+# Phân quyền cho Apache truy cập file
+RUN chown -R www-data:www-data /var/www/html
+
+# Cổng mặc định
 EXPOSE 80
