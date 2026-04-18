@@ -3,6 +3,8 @@ services:
     name: jkhoa-php-wordpress
     runtime: docker
     plan: free
+    domains:
+      - php.jkhoa.dev
     envVars:
       - key: WORDPRESS_DB_HOST
         fromDatabase:
